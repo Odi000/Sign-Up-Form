@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+:root {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+a {
+    color: white;
+}
+
+.decoration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image:
+    url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    flex-grow: 1;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    margin-top: 20rem;
+    background-color: #00000066;
+    font-family: Norse-Bold;
+    font-size: 11rem;
+}
+
+.logo>img {
+    width: 10rem;
+}
+
+.credits {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.interaction-side {
+    background-color: antiquewhite;
+    flex-grow: 2;
+}
