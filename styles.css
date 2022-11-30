@@ -83,7 +83,7 @@ a {
 .description {
     position: absolute;
     top: -15rem;
-    width: 75%;
+    width: clamp(37rem, 75%, 62rem);
 }
 
 .description > h2 {
