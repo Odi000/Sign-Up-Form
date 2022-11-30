@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;500;700;800&display=swap');
+
 @font-face {
     font-family: Norse-Bold;
     src: url(./fonts/Norse-Bold.otf);
@@ -5,6 +7,11 @@
 
 :root {
     font-size: 10px;
+    font-family: 'Solway', serif;
+    --bg-color: #F9FAFB;
+    --logo-shade: #00000066;
+    --input-clr: #E5E7EB;
+    --btn-clr: #596D48;
 }
 
 * {
@@ -15,6 +22,7 @@ section {
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: var(--bg-color);
 }
 
 a {
@@ -39,7 +47,7 @@ a {
     align-items: center;
     height: 16rem;
     margin-top: 19rem;
-    background-color: #00000066;
+    background-color: var(--logo-shade);
     font-family: Norse-Bold;
     font-size: 11rem;
 }
@@ -64,16 +72,22 @@ a {
 
 .form-container {
     position: relative;
-    height: 30%;
+    height: 26.4rem;
     margin-top: 8.4rem;
-    padding: 4rem;
-    background-color: antiquewhite;
+    padding-left: 4rem;
+    background-color: white;
+    box-shadow: 
+    2px 3px 6px 1px rgba(0, 0, 0, 0.12);
 }
 
 .description {
     position: absolute;
     top: -15rem;
     width: 75%;
+}
+
+.description > h2 {
+    font-size: 1.8rem;
 }
 
 .form {
@@ -83,4 +97,10 @@ a {
 .take-action {
     position: absolute;
     bottom: -8rem;
+}
+
+.take-action a {
+    color: var(--btn-clr);
+    text-decoration: none;
+    font-weight: 700;
 }
