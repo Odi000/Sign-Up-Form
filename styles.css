@@ -129,6 +129,41 @@ input:focus-visible {
     box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, 0.2);
 }
 
+.invalid input,.mis-match input {
+    border: 1px solid #B91C1C;
+}
+
+.cell p {
+    position: absolute;
+    margin-top: .4rem;
+    color: #1D4ED8;
+    opacity: 0;
+}
+
+input.focused + p {
+    opacity: 1;
+}
+
+form>:nth-child(3).invalid::after {
+    position: relative;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    content: "* Password must contain 6-20 characters";
+    color: #B91C1C;
+    opacity: 1;
+}
+
+form>:nth-child(3).mis-match::after {
+    position: relative;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    content: "* Passwords do not match";
+    color: #B91C1C;
+    opacity: 1;
+}
+
 .take-action {
     position: absolute;
     font-size: 1.4rem;
@@ -146,8 +181,12 @@ button {
     padding: 1.2rem 3.8rem;
     font-size: 1.4rem;
     font-weight: 600;
-    transition: transform 0.1s;
+    transition: transform 0.1s, background 0.25s;
     box-shadow: .2rem .2rem .4rem rgba(0, 0, 0, 0.14);
+}
+
+button:hover {
+    background-color: #516341;
 }
 
 button:active {
@@ -159,6 +198,11 @@ button:active {
     text-decoration: none;
     font-weight: 700;
     transition: all 0.08s;
+}
+
+.take-action a:hover {
+    background-color: #E1E4DE;
+    outline: 3px solid #E1E4DE;
 }
 
 .take-action a:active {
